@@ -17,33 +17,77 @@
 <main>
   <div class="brand">WatchMeNow</div>
   <h1>Politique de confidentialité</h1>
-  <p class="date">Dernière mise à jour : 27 septembre 2026</p>
-  <p>WatchMeNow permet de suivre des films, séries et animés sans créer de compte. L'application ne contient ni publicité, ni outil de suivi publicitaire, ni SDK d'analyse d'audience.</p>
+  <p class="date">Dernière mise à jour : 8 octobre 2026</p>
+
+  <p>WatchMeNow permet de suivre des films, séries et animés sans créer de compte. L'application ne contient ni publicité ni outil de suivi publicitaire. Elle n'utilise pas de service d'analyse d'audience pour mesurer votre utilisation de la bibliothèque. Les services externes nécessaires à la connexion, aux sauvegardes et aux informations sur les titres sont décrits ci-dessous.</p>
 
   <h2>Données conservées sur l'appareil</h2>
-  <p>Votre bibliothèque, vos épisodes vus, notes, favoris, dates de visionnage et préférences sont enregistrés sur votre appareil. L'application crée aussi jusqu'à cinq sauvegardes automatiques dans <strong>Fichiers &gt; WatchMeNow &gt; Sauvegardes</strong>. Les exports que vous choisissez de partager peuvent être conservés à l'emplacement que vous sélectionnez.</p>
+
+  <p>Votre bibliothèque, vos épisodes vus, notes, favoris, dates de visionnage et préférences sont enregistrés sur votre appareil. Les titres saisis manuellement et les images que vous choisissez comme affiches font aussi partie de cette bibliothèque. Le sélecteur de photos donne accès aux images que vous sélectionnez, sans importer toute votre photothèque. L'application crée aussi jusqu'à cinq sauvegardes automatiques dans <strong>Fichiers &gt; WatchMeNow &gt; Sauvegardes</strong>. Les exports que vous choisissez de partager peuvent être conservés à l'emplacement que vous sélectionnez.</p>
+
+  <p>Les rappels sont des notifications locales programmées sur l'appareil. Ils ne nécessitent pas l'envoi de votre bibliothèque à un serveur de notifications WatchMeNow.</p>
 
   <h2>Compte Apple et synchronisation iCloud</h2>
+
   <p>Si vous choisissez <strong>Se connecter avec Apple</strong>, l'application conserve sur l'appareil l'identifiant fourni par Apple, ainsi que votre nom et votre adresse e-mail si Apple les transmet et que vous choisissez de les partager. Ces informations servent à afficher votre compte et à activer la synchronisation ; elles ne sont pas envoyées à TMDB.</p>
+
   <p>Une copie JSON de votre bibliothèque est enregistrée dans la base <strong>CloudKit privée de votre compte iCloud</strong> pour synchroniser vos appareils Apple. Cette copie contient les titres suivis, votre progression, vos notes et les autres informations de votre bibliothèque. L'application ne publie pas de profil public. Elle tente de supprimer tout ancien profil public créé par une version antérieure lors de la synchronisation.</p>
 
   <h2>Compte Google et sauvegarde Google Drive</h2>
-  <p>Si vous choisissez <strong>Se connecter avec Google</strong>, l'application conserve sur l'appareil l'identifiant de votre compte Google, votre nom et votre adresse e-mail pour afficher votre compte et retrouver votre sauvegarde. Le SDK de connexion Google conserve ses jetons d'accès dans le trousseau de l'appareil. Google indique que ce SDK peut recevoir un identifiant utilisateur pour gérer les autorisations OAuth et l'adresse IP à des fins de prévention de la fraude.</p>
-  <p>Avec votre autorisation, WatchMeNow accède uniquement au dossier privé de l'application dans <strong>Google Drive</strong> (<code>drive.appdata</code>). Il y enregistre une copie JSON des titres suivis, épisodes vus, notes et autres données de votre bibliothèque pour les restaurer et les synchroniser sur vos appareils. Ce dossier est masqué dans Google Drive et inaccessible aux autres applications. WatchMeNow ne lit ni vos e-mails Gmail ni vos autres fichiers Drive. La connexion Google et la sauvegarde Drive sont indépendantes d'iCloud.</p>
+
+  <p>Si vous choisissez <strong>Se connecter avec Google</strong>, l'application conserve sur l'appareil l'identifiant de votre compte Google, votre nom et votre adresse e-mail pour afficher votre compte et retrouver votre sauvegarde. Le SDK de connexion Google conserve ses jetons d'accès dans le trousseau de l'appareil. WatchMeNow ne reçoit pas votre mot de passe Google.</p>
+
+  <p>Google traite l'identifiant utilisateur pour enregistrer les autorisations de connexion. Il peut utiliser l'adresse IP pour estimer une localisation approximative et prévenir la fraude. Le manifeste de confidentialité du SDK Google intégré déclare également le nom, l'adresse e-mail et le numéro de téléphone pour le fonctionnement de la connexion, ainsi que des identifiants d'appareil et des données techniques et d'utilisation pour des analyses de ce service. Ces déclarations concernent le service de connexion Google ; WatchMeNow ne demande pas de numéro de téléphone, ne le reçoit pas dans le profil utilisé par l'app et n'accède pas à vos contacts. Consultez les <a href="https://developers.google.com/identity/sign-in/ios/app-privacy">informations de Google sur son SDK de connexion</a>, son <a href="https://github.com/google/GoogleSignIn-iOS/blob/9.0.0/GoogleSignIn/Sources/Resources/PrivacyInfo.xcprivacy">manifeste de confidentialité</a> et sa <a href="https://policies.google.com/privacy?hl=fr">politique de confidentialité</a>.</p>
+
+  <p>Avec votre autorisation, WatchMeNow accède uniquement au dossier privé de l'application dans <strong>Google Drive</strong> (<code>drive.appdata</code>). Il y enregistre une copie JSON des titres suivis, épisodes vus, notes, affiches personnelles et autres données de votre bibliothèque pour les restaurer et les synchroniser sur vos appareils. Chaque installation utilise un identifiant technique aléatoire pour distinguer son fichier de synchronisation ; il ne s'agit pas d'un identifiant publicitaire. Ce dossier est masqué dans Google Drive et inaccessible aux autres applications. WatchMeNow ne lit ni vos e-mails Gmail ni vos autres fichiers Drive. La connexion Google et la sauvegarde Drive sont indépendantes d'iCloud.</p>
 
   <h2>Données transmises à TMDB</h2>
+
   <p>L'application utilise l'API de <strong>The Movie Database (TMDB)</strong> pour rechercher des titres et obtenir leurs métadonnées, affiches et dates de diffusion. Les titres recherchés ou identifiants des médias sont transmis à TMDB ; comme pour toute connexion Internet, TMDB peut recevoir des données techniques de connexion telles que l'adresse IP et des informations sur l'utilisation de son API. TMDB peut utiliser ces informations pour fournir et analyser son service. Votre identifiant Apple et votre bibliothèque complète ne sont pas envoyés à TMDB. Consultez aussi la <a href="https://www.themoviedb.org/privacy-policy">politique de confidentialité de TMDB</a>.</p>
+
   <p>Ce produit utilise l'API TMDB mais n'est ni approuvé ni certifié par TMDB.</p>
 
+  <h2>Services externes de notes</h2>
+
+  <p>Lorsque l'application affiche les notes externes d'un titre et qu'aucune réponse utilisable n'est déjà en cache, elle peut contacter les services suivants :</p>
+
+  <ul>
+    <li><strong>AniList</strong> (<code>graphql.anilist.co</code>) reçoit le titre d'un animé recherché pour trouver sa fiche et sa note.</li>
+    <li><strong>Jikan / MyAnimeList</strong> (<code>api.jikan.moe</code>) reçoit l'identifiant MyAnimeList de l'animé pour obtenir sa note. Jikan est une API tierce donnant accès aux informations publiques de MyAnimeList.</li>
+    <li><strong>Cinemeta / Stremio</strong> (<code>v3-cinemeta.strem.io</code>) reçoit l'identifiant IMDb et le type de contenu, film ou série, pour obtenir une note IMDb.</li>
+    <li><strong>Ratings Aggregator / ElfHosted</strong> (<code>rating-aggregator.elfhosted.com</code>) reçoit l'identifiant IMDb et le type de contenu pour obtenir un score Rotten Tomatoes.</li>
+  </ul>
+
+  <p>Ces connexions communiquent aussi votre adresse IP et les informations techniques habituelles d'une requête Internet. WatchMeNow ne joint à ces requêtes ni votre nom, ni votre adresse e-mail, ni vos identifiants ou jetons Apple/Google, ni vos notes personnelles, ni votre bibliothèque complète. Aucun compte AniList, MyAnimeList, Stremio, IMDb ou Rotten Tomatoes n'est nécessaire pour consulter ces notes dans l'app. Les fournisseurs peuvent conserver des journaux techniques selon leurs propres règles ; WatchMeNow ne contrôle pas cette conservation.</p>
+
+  <p>Les liens vers les fiches IMDb, Rotten Tomatoes, AniList ou MyAnimeList, les bandes-annonces YouTube et les sites des plateformes s'ouvrent seulement lorsque vous les choisissez. Le site ou l'application ainsi ouvert applique alors ses propres règles de confidentialité.</p>
+
+  <h2>Conservation et sécurité</h2>
+
+  <p>Votre bibliothèque locale est conservée jusqu'à ce que vous supprimiez les titres ou choisissiez de l'effacer. Une copie synchronisée reste dans votre compte iCloud ou Google Drive jusqu'à sa suppression ; une simple déconnexion ne la supprime pas.</p>
+
+  <p>Les notes externes mises en cache expirent après 150 jours. Les données descriptives provenant de TMDB sont renouvelées ou purgées après leur délai de conservation, au plus tard 180 jours pour les copies de la bibliothèque traitées par l'app. Ce nettoyage est effectué quand l'application s'exécute et lors des opérations de sauvegarde, de restauration ou de synchronisation. Il conserve votre suivi personnel. Il ne modifie pas les exports déjà enregistrés hors de l'app ni les fichiers d'un autre appareil qui n'a pas encore exécuté ce nettoyage.</p>
+
+  <p>Les échanges réseau de l'app utilisent HTTPS. Les jetons de connexion sont conservés dans le trousseau du système. Les sauvegardes sont privées au compte cloud choisi, et l'application ne vend pas votre bibliothèque ni vos informations de compte.</p>
+
   <h2>Suppression et contrôle</h2>
+
   <p>Vous pouvez exporter votre bibliothèque en JSON ou CSV et supprimer des titres depuis l'application.</p>
+
   <p><strong>Déconnecter</strong> retire les informations de connexion de cet appareil. Votre bibliothèque locale et votre copie iCloud ou Google Drive restent disponibles.</p>
-  <p><strong>Réglages &gt; Supprimer ma synchronisation</strong> (juste sous Compte et sauvegarde) supprime la copie de votre bibliothèque dans CloudKit pour un compte Apple, ou tous les fichiers WatchMeNow du dossier privé Google Drive pour un compte Google. Pour Apple, l'application supprime aussi tout ancien profil public associé. Pour Google, elle tente également de révoquer l'autorisation OAuth après la suppression des fichiers ; si cette révocation échoue, l'application vous indique comment retirer l'accès depuis votre compte Google. Si la suppression distante échoue, l'application conserve la connexion pour vous permettre de réessayer. La bibliothèque et les sauvegardes locales restent sur cet appareil pour que vous puissiez continuer sans compte. Vous pouvez les supprimer séparément en supprimant les titres et les fichiers de sauvegarde, ou en désinstallant l'application. Les exports enregistrés hors de l'application doivent être supprimés à leur emplacement.</p>
-  <p><strong>Réglages &gt; Compte et sauvegarde &gt; Supprimer mon compte et mes données</strong> supprime d'abord la copie iCloud ou Google Drive et le compte WatchMeNow comme ci-dessus, puis efface sur cet appareil la bibliothèque, ses sauvegardes automatiques, les rappels programmés et l'état des notifications : l'application repart de zéro. Une confirmation est demandée. Si la suppression distante échoue, rien n'est effacé sur l'appareil. Les réglages de l'application (thème, plateformes, clé TMDB) sont conservés.</p>
+
+  <p><strong>Réglages &gt; Compte et sauvegarde &gt; Supprimer mon compte</strong> propose deux choix, suivis d'une confirmation : supprimer le compte en gardant la bibliothèque de cet appareil, ou supprimer le compte et effacer aussi la bibliothèque, les sauvegardes automatiques, les rappels et les caches de cet appareil. Les préférences de l'application sont conservées. Les exports enregistrés hors de l'application doivent être supprimés à leur emplacement.</p>
+
+  <p>Dans les deux cas, l'application supprime la copie de votre bibliothèque dans CloudKit pour un compte Apple, ou tous les fichiers WatchMeNow du dossier privé Google Drive pour un compte Google. Pour Apple, elle supprime aussi tout ancien profil public associé. Pour Google, elle tente de révoquer l'autorisation OAuth après la suppression des fichiers ; si cette révocation échoue, elle vous indique comment retirer l'accès depuis votre compte Google. Si la suppression distante échoue, le compte reste connecté et aucune donnée locale n'est effacée. Si la copie distante a été supprimée mais que l'effacement local échoue, l'application vous indique les données qui restent sur cet appareil.</p>
+
+  <p><strong>Réglages &gt; Réinitialiser l'app</strong> (tout en bas) efface sur cet appareil la bibliothèque, ses sauvegardes automatiques, les rappels programmés et l'état des notifications : l'application repart comme neuve. Si un compte est connecté, il est d'abord déconnecté, sans supprimer la copie iCloud ou Google Drive : une nouvelle connexion la restaure. Une confirmation est demandée. Les réglages de l'application (thème, plateformes) sont conservés.</p>
+
   <p>La suppression du compte WatchMeNow ne supprime ni votre compte Apple ni votre compte Google. Pour retirer également l'autorisation <strong>Se connecter avec Apple</strong>, ouvrez les réglages de votre compte Apple sur l'appareil et retirez WatchMeNow de la liste des apps autorisées.</p>
+
   <p>Si vous utilisez WatchMeNow sur plusieurs appareils, vérifiez que les autres appareils sont déconnectés après la suppression pour éviter qu'ils n'envoient à nouveau une ancienne bibliothèque dans le cloud. Une nouvelle connexion à WatchMeNow pourra recréer une copie distante à partir des données locales encore présentes.</p>
 
   <h2>Contact</h2>
+
   <p>Pour toute question sur vos données : <a href="mailto:contact@watchmenow.app">contact@watchmenow.app</a>.</p>
 </main>
 </body>
