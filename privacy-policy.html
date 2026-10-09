@@ -49,16 +49,17 @@
 
   <h2>Services externes de notes</h2>
 
-  <p>Les notes des films et séries sont fournies par TMDB. Pour les notes des animés, lorsqu'aucune réponse utilisable n'est déjà en cache, l'application peut contacter les services suivants :</p>
+  <p>Les notes des films et séries sont fournies par TMDB. À partir de la version <strong>1.0 (build 7)</strong>, les notes des animés utilisent l'API officielle MyAnimeList, lorsque cet accès est configuré et qu'aucune réponse utilisable n'est déjà en cache :</p>
 
   <ul>
-    <li><strong>AniList</strong> (<code>graphql.anilist.co</code>) reçoit le titre d'un animé recherché pour trouver sa fiche et sa note.</li>
-    <li><strong>Jikan / MyAnimeList</strong> (<code>api.jikan.moe</code>) reçoit l'identifiant MyAnimeList de l'animé pour obtenir sa note. Jikan est une API tierce donnant accès aux informations publiques de MyAnimeList.</li>
+    <li><strong>MyAnimeList</strong> (<code>api.myanimelist.net</code>) reçoit le titre de l'animé recherché, et si nécessaire son titre original fourni par TMDB, pour retrouver sa fiche et sa note publique. Un identifiant technique de l'application accompagne la requête ; aucun compte MyAnimeList de l'utilisateur n'est requis.</li>
   </ul>
 
-  <p>Ces connexions communiquent aussi votre adresse IP et les informations techniques habituelles d'une requête Internet. WatchMeNow ne joint à ces requêtes ni votre nom, ni votre adresse e-mail, ni vos identifiants ou jetons Apple/Google, ni vos notes personnelles, ni votre bibliothèque complète. Aucun compte AniList ou MyAnimeList n'est nécessaire pour consulter ces notes dans l'app. Les fournisseurs peuvent conserver des journaux techniques selon leurs propres règles ; WatchMeNow ne contrôle pas cette conservation.</p>
+  <p>Ces connexions communiquent aussi votre adresse IP et les informations techniques habituelles d'une requête Internet. WatchMeNow ne joint à ces requêtes ni votre nom, ni votre adresse e-mail, ni vos identifiants ou jetons Apple/Google, ni vos notes personnelles, ni votre bibliothèque complète. Aucun compte MyAnimeList n'est nécessaire pour consulter ces notes dans l'app. Les fournisseurs peuvent conserver des journaux techniques selon leurs propres règles ; WatchMeNow ne contrôle pas cette conservation.</p>
 
-  <p>Les liens vers les fiches AniList ou MyAnimeList, les bandes-annonces YouTube et les sites des plateformes s'ouvrent seulement lorsque vous les choisissez. Le site ou l'application ainsi ouvert applique alors ses propres règles de confidentialité.</p>
+  <p>Les liens vers les fiches MyAnimeList, les bandes-annonces YouTube et les sites des plateformes s'ouvrent seulement lorsque vous les choisissez. Le site ou l'application ainsi ouvert applique alors ses propres règles de confidentialité.</p>
+
+  <p>Les versions antérieures à <strong>1.0 (build 7)</strong> peuvent aussi contacter <strong>AniList</strong> (<code>graphql.anilist.co</code>) avec le titre recherché et <strong>Jikan</strong> (<code>api.jikan.moe</code>) avec l'identifiant MyAnimeList. Ces appels ont été remplacés par l'API officielle ; l'ancien cache Jikan/AniList est supprimé à l'initialisation du cache de notes d'animés dans le build 7.</p>
 
   <p>Les versions antérieures à <strong>1.0 (build 5)</strong> peuvent aussi contacter <strong>Cinemeta / Stremio</strong> (<code>v3-cinemeta.strem.io</code>) et <strong>Ratings Aggregator / ElfHosted</strong> (<code>rating-aggregator.elfhosted.com</code>) avec l'identifiant IMDb et le type de contenu pour obtenir des notes IMDb ou Rotten Tomatoes. Ces appels et les liens IMDb/Rotten Tomatoes ont été retirés à partir du build 5. L'ancien cache de ces notes est supprimé lorsque le cache de notes TMDB est initialisé dans cette version.</p>
 
@@ -66,7 +67,7 @@
 
   <p>Votre bibliothèque locale est conservée jusqu'à ce que vous supprimiez les titres ou choisissiez de l'effacer. Une copie synchronisée reste dans votre compte iCloud ou Google Drive jusqu'à sa suppression ; une simple déconnexion ne la supprime pas.</p>
 
-  <p>Les notes externes mises en cache expirent après 150 jours. Les données descriptives provenant de TMDB sont renouvelées ou purgées après leur délai de conservation, au plus tard 180 jours pour les copies de la bibliothèque traitées par l'app. Ce nettoyage est effectué quand l'application s'exécute et lors des opérations de sauvegarde, de restauration ou de synchronisation. Il conserve votre suivi personnel. Il ne modifie pas les exports déjà enregistrés hors de l'app ni les fichiers d'un autre appareil qui n'a pas encore exécuté ce nettoyage.</p>
+  <p>À partir du build 7, les notes MyAnimeList mises en cache expirent après 24 heures ; les notes TMDB expirent après 150 jours. Les données descriptives provenant de TMDB sont renouvelées ou purgées après leur délai de conservation, au plus tard 180 jours pour les copies de la bibliothèque traitées par l'app. Ce nettoyage est effectué quand l'application s'exécute et lors des opérations de sauvegarde, de restauration ou de synchronisation. Il conserve votre suivi personnel. Il ne modifie pas les exports déjà enregistrés hors de l'app ni les fichiers d'un autre appareil qui n'a pas encore exécuté ce nettoyage.</p>
 
   <p>Les échanges réseau de l'app utilisent HTTPS. Les jetons de connexion sont conservés dans le trousseau du système. Les sauvegardes sont privées au compte cloud choisi, et l'application ne vend pas votre bibliothèque ni vos informations de compte.</p>
 
