@@ -17,7 +17,7 @@
 <main>
   <div class="brand">WatchMeNow</div>
   <h1>Politique de confidentialité</h1>
-  <p class="date">Dernière mise à jour : 8 octobre 2026</p>
+  <p class="date">Dernière mise à jour : 9 octobre 2026</p>
 
   <p>WatchMeNow permet de suivre des films, séries et animés sans créer de compte. L'application ne contient ni publicité ni outil de suivi publicitaire. Elle n'utilise pas de service d'analyse d'audience pour mesurer votre utilisation de la bibliothèque. Les services externes nécessaires à la connexion, aux sauvegardes et aux informations sur les titres sont décrits ci-dessous.</p>
 
@@ -49,18 +49,18 @@
 
   <h2>Services externes de notes</h2>
 
-  <p>Lorsque l'application affiche les notes externes d'un titre et qu'aucune réponse utilisable n'est déjà en cache, elle peut contacter les services suivants :</p>
+  <p>Les notes des films et séries sont fournies par TMDB. Pour les notes des animés, lorsqu'aucune réponse utilisable n'est déjà en cache, l'application peut contacter les services suivants :</p>
 
   <ul>
     <li><strong>AniList</strong> (<code>graphql.anilist.co</code>) reçoit le titre d'un animé recherché pour trouver sa fiche et sa note.</li>
     <li><strong>Jikan / MyAnimeList</strong> (<code>api.jikan.moe</code>) reçoit l'identifiant MyAnimeList de l'animé pour obtenir sa note. Jikan est une API tierce donnant accès aux informations publiques de MyAnimeList.</li>
-    <li><strong>Cinemeta / Stremio</strong> (<code>v3-cinemeta.strem.io</code>) reçoit l'identifiant IMDb et le type de contenu, film ou série, pour obtenir une note IMDb.</li>
-    <li><strong>Ratings Aggregator / ElfHosted</strong> (<code>rating-aggregator.elfhosted.com</code>) reçoit l'identifiant IMDb et le type de contenu pour obtenir un score Rotten Tomatoes.</li>
   </ul>
 
-  <p>Ces connexions communiquent aussi votre adresse IP et les informations techniques habituelles d'une requête Internet. WatchMeNow ne joint à ces requêtes ni votre nom, ni votre adresse e-mail, ni vos identifiants ou jetons Apple/Google, ni vos notes personnelles, ni votre bibliothèque complète. Aucun compte AniList, MyAnimeList, Stremio, IMDb ou Rotten Tomatoes n'est nécessaire pour consulter ces notes dans l'app. Les fournisseurs peuvent conserver des journaux techniques selon leurs propres règles ; WatchMeNow ne contrôle pas cette conservation.</p>
+  <p>Ces connexions communiquent aussi votre adresse IP et les informations techniques habituelles d'une requête Internet. WatchMeNow ne joint à ces requêtes ni votre nom, ni votre adresse e-mail, ni vos identifiants ou jetons Apple/Google, ni vos notes personnelles, ni votre bibliothèque complète. Aucun compte AniList ou MyAnimeList n'est nécessaire pour consulter ces notes dans l'app. Les fournisseurs peuvent conserver des journaux techniques selon leurs propres règles ; WatchMeNow ne contrôle pas cette conservation.</p>
 
-  <p>Les liens vers les fiches IMDb, Rotten Tomatoes, AniList ou MyAnimeList, les bandes-annonces YouTube et les sites des plateformes s'ouvrent seulement lorsque vous les choisissez. Le site ou l'application ainsi ouvert applique alors ses propres règles de confidentialité.</p>
+  <p>Les liens vers les fiches AniList ou MyAnimeList, les bandes-annonces YouTube et les sites des plateformes s'ouvrent seulement lorsque vous les choisissez. Le site ou l'application ainsi ouvert applique alors ses propres règles de confidentialité.</p>
+
+  <p>Les versions antérieures à <strong>1.0 (build 5)</strong> peuvent aussi contacter <strong>Cinemeta / Stremio</strong> (<code>v3-cinemeta.strem.io</code>) et <strong>Ratings Aggregator / ElfHosted</strong> (<code>rating-aggregator.elfhosted.com</code>) avec l'identifiant IMDb et le type de contenu pour obtenir des notes IMDb ou Rotten Tomatoes. Ces appels et les liens IMDb/Rotten Tomatoes ont été retirés à partir du build 5. L'ancien cache de ces notes est supprimé lorsque le cache de notes TMDB est initialisé dans cette version.</p>
 
   <h2>Conservation et sécurité</h2>
 
